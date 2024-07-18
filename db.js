@@ -1,10 +1,13 @@
 //this file will help to form connection between mongoDB database server and nodemon.js server via mongoose
 
 const mongoose = require("mongoose")
+require('dotenv').config()
 
 // Define the MongoDB connection URl
 
-const mongoURL="mongodb://127.0.0.1:27017/hotel;"
+// const mongoURL=process.env.MONGO_DB_LOCAL //db connection for localhost in compass
+// const mongoURL="mongodb+srv://msourav4455:Qwerty!123@cluster0.zk35hws.mongodb.net/"  //db connection for mongoDB in atlas
+const mongoURL = process.env.DB_URL
 
 //set up mongoDB connection
 
@@ -14,7 +17,7 @@ mongoose.connect(mongoURL,{
     useUnifiedTopology: true
 })
 
-// Get the default connection
+// Get the default connection 
 // Mongoose maintains a default connection object representing the mongoDB connection
 const db=mongoose.connection;
 
