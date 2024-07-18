@@ -1,0 +1,16 @@
+ (function(){
+    console.log("ok")
+ })()
+
+
+
+ function callback(){
+    console.log("called")
+ }
+
+ const add=function(a,b,callback){
+     callback()
+    var res=a+b
+    console.log(res)
+ }
+ add(2,3,callback)
