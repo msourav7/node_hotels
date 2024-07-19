@@ -5,9 +5,9 @@ require('dotenv').config()
 
 // Define the MongoDB connection URl
 
-// const mongoURL=process.env.MONGO_DB_LOCAL //db connection for localhost in compass
 // const mongoURL="mongodb+srv://msourav4455:Qwerty!123@cluster0.zk35hws.mongodb.net/"  //db connection for mongoDB in atlas
-const mongoURL = process.env.DB_URL
+const mongoURL=process.env.MONGO_DB_LOCAL //db connection for localhost in compass
+// const mongoURL = process.env.DB_URL  
 
 //set up mongoDB connection
 
